@@ -32,9 +32,10 @@ const Main = () => {
         
         // Send a GET request to the backend API endpoint to fetch quiz data
         const response = await fetch(`/api/get/${token}`);
-        
+        console.log(response);
         // Parse the JSON response
         const data = await response.json();
+       
         
         // Update the quizData state with the fetched quiz questions
         setQuizData(data.questions);
