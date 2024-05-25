@@ -3,7 +3,7 @@ export default {
   server: {
     proxy: {
       '/api': {
-        target: 'https://backendgame.sytes.net',
+        target: '*',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
