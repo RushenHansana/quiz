@@ -44,6 +44,12 @@ const Main = () => {
       } catch (error) {
         // Handle errors that occur during the fetch operation
         console.error('Error fetching quiz data:', error);
+            // Handle errors gracefully
+        
+        if (error instanceof SyntaxError) {
+            // It's a parsing error!
+            console.log('Raw response data:', await response.text()); // Log the raw data to help diagnose
+        } 
       
       }
     };
