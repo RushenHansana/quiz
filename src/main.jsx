@@ -31,7 +31,7 @@ const Main = () => {
         console.log(token);
         
         // Send a GET request to the backend API endpoint to fetch quiz data
-        const response = await fetch(`https://backendgame.sytes.net/${token}`,{
+        const response = await fetch(`https://backendgame.sytes.net/get/${token}`,{
           mode: 'no-cors'
         });
         console.log(response);
