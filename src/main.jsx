@@ -36,7 +36,8 @@ const Main = () => {
         });
         console.log(response);
         // Parse the JSON response
-        const data = await response.json();
+        const data = await response.text();
+        console.log(data);
        
         
         // Update the quizData state with the fetched quiz questions
